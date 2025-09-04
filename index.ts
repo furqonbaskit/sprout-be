@@ -78,8 +78,8 @@ export function processMove(
   const pieceColor = getPieceColor(piece);
 
   if (
-    (currentPlayer === "white" && pieceColor !== WHITE) ||
-    (currentPlayer === "black" && pieceColor !== BLACK)
+    (currentPlayer === WHITE && pieceColor !== WHITE) ||
+    (currentPlayer === BLACK && pieceColor !== BLACK)
   ) {
     console.log(`You can only move your own (${currentPlayer}) pieces.`);
     return { success: false };
